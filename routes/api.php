@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\api\ApiTestDriveController;
 use App\Http\Controllers\api\CarController;
+use App\Http\Controllers\api\CommentApiController;
 use App\Http\Controllers\api\TestimoniApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -11,3 +12,5 @@ Route::get('/carsall', [CarController::class, 'getAll']);
 Route::get('/cars/{slug}', [CarController::class, 'getCarbySlug']);
 Route::get('/testimoni', [TestimoniApiController::class, 'index']);
 Route::post('/testdrive', [ApiTestDriveController::class, 'store']);
+Route::get('/komentar', [CommentApiController::class, 'getAll']);
+Route::post('/komentar/store', [CommentApiController::class, 'store']);
