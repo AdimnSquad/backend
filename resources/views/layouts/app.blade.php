@@ -16,7 +16,11 @@
     <link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet" />
     <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css"
         rel="stylesheet" />
-
+        <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/47.3.0/ckeditor5.css" />
+	<script src="https://cdn.ckeditor.com/ckeditor5/47.3.0/ckeditor5.umd.js"></script>
+	<!-- Add if you use premium features. -->
+	<link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5-premium-features/47.3.0/ckeditor5-premium-features.css" />
+	<script src="https://cdn.ckeditor.com/ckeditor5-premium-features/47.3.0/ckeditor5-premium-features.umd.js"></script>
 </head>
 
 <body>
