@@ -37,7 +37,7 @@
 
                         <div class="mb-3">
                             <label for="id_mobil" class="form-label">Cars</label>
-                            <select class="form-select" id="id_mobil" name="id_mobil" required>
+                            <select class="form-select" id="id_mobil" name="id_cars" required>
                                 <option value="">Select category</option>
                                 @foreach ($cars as $item)
                                     <option value="{{ $item->id }}">{{ $item->name }}</option>
