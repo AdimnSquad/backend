@@ -23,6 +23,12 @@
                 Colors
             </a>
         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="{{ route('content.index') }}">
+                <i class="fas fa-file-text me-2"></i>
+                Content
+            </a>
+        </li>
         <li class="nav-item">
             <a class="nav-link" href="{{ route('interior.index') }}">
                 <i class="fas fa-couch me-2"></i>

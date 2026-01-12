@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CarsController;
 use App\Http\Controllers\ColorController;
+use App\Http\Controllers\ContentController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ExteriorController;
 use App\Http\Controllers\InteriorController;
@@ -25,4 +26,5 @@ Route::middleware(['auth', 'check.role:admin'])->group(function () {
     Route::resource('exterior', ExteriorController::class);
     Route::resource('testimoni', TestimoniController::class);
     Route::resource('testdrive', TestDriveController::class);
+    Route::resource('content', ContentController::class);
 });

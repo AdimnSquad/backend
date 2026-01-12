@@ -23,12 +23,12 @@
     <div class="fade-in">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <div>
-                <h1 class="h3 fw-bold text-dark">Cars Management</h1>
-                <p class="text-muted">Manage your car inventory</p>
+                <h1 class="h3 fw-bold text-dark">Content Management</h1>
+                <p class="text-muted">Manage your car Content</p>
             </div>
-            <a href="{{ route('cars.create') }}" class="btn btn-primary-custom">
+            <a href="{{ route('content.create') }}" class="btn btn-primary-custom">
                 <i class="fas fa-plus me-2"></i>
-                Add New Car
+                Add New Car Content
             </a>
         </div>
 
@@ -38,7 +38,7 @@
                 <div class="card card-custom">
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <div>
-                            <h5 class="card-title mb-0">Cars List</h5>
+                            <h5 class="card-title mb-0">Content Car List</h5>
                             <small class="text-muted">View and manage all cars</small>
                         </div>
                         <div class="search-box">
@@ -52,38 +52,24 @@
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Name</th>
-                                        <th>deskripsi</th>
+                                        <th>Name Cars</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @forelse ($cars as $item)
+                                    @forelse ($contents as $item)
                                         <tr>
-                                            <td>{{ $loop->iteration }}</td>
-                                            <td>{{ $item->name }}</td>
-                                            <td>{{ $item->deskripsi }}</td>
+                                            <td>{{$loop->index}}</td>
+                                            <td>{{$item->car->name}}</td>
                                             <td>
-                                                <a href="{{ route('cars.edit', $item->id) }}"
-                                                    class="btn btn-sm btn-outline-primary btn-edit me-1" data-type="car">
-                                                    <i class="fas fa-edit"></i>
-                                                </a>
-                                                <form action="{{ route('cars.destroy', $item->id) }}" method="POST"
-                                                    class="d-inline">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button type="submit" class="btn btn-sm btn-outline-danger btn-delete"
-                                                        data-type="car"
-                                                        onclick="return confirm('Yakin ingin menghapus mobil ini?')">
-                                                        <i class="fas fa-trash"></i>
-                                                    </button>
-                                                </form>
+                                                <a href="" class="btn btn-sm btn-warning">Edit</a>
+                                                <a href="" class="btn btn-sm btn-primary">Show</a>
+                                                <button class="btn btn-sm btn-danger">Delete</button>
                                             </td>
-
                                         </tr>
                                     @empty
                                         <tr>
-                                            <td colspan="4" class="text-center">Data Tidak ada</td>
+                                            <td class="text-center" colspan="3">Data Tidak ditemukan</td>
                                         </tr>
                                     @endforelse
                                 </tbody>
