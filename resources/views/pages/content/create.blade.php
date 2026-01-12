@@ -32,7 +32,7 @@
                     <small class="text-muted">Create new Content package</small>
                 </div>
                 <div class="card-body">
-                    <form action="{{route('exterior.store')}}" method="POST" enctype="multipart/form-data">
+                    <form action="{{route('content.store')}}" method="POST" enctype="multipart/form-data">
                         @csrf
 
                         <div class="mb-3">
