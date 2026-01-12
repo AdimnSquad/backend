@@ -59,7 +59,7 @@
                                 <tbody>
                                     @forelse ($contents as $item)
                                         <tr>
-                                            <td>{{$loop->index}}</td>
+                                            <td>{{$loop->iteration}}</td>
                                             <td>{{$item->car->name}}</td>
                                             <td>
                                                 <a href="" class="btn btn-sm btn-warning">Edit</a>
