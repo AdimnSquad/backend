@@ -60,7 +60,7 @@
                                     @forelse ($contents as $item)
                                         <tr>
                                             <td>{{$loop->index}}</td>
-                                            <td>{{$item->car->name}}</td>
+                                            <td>{{$item->car->nama}}</td>
                                             <td>
                                                 <a href="" class="btn btn-sm btn-warning">Edit</a>
                                                 <a href="" class="btn btn-sm btn-primary">Show</a>
